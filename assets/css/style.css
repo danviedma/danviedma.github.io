@@ -388,11 +388,50 @@ footer p {
 }
 
 
-/* Estilos para pantallas pequeñas (móviles) */
 @media only screen and (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+
     header {
-        height: auto;
-        padding: 20px 10px;
+        flex: 1 0 auto; 
+    }
+
+    .section-container-port {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cards-section {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    footer {
+        flex-shrink: 0;
+        margin-top: auto;
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .portafolio-footer{
+        display: none;
     }
 
     nav ul {
@@ -425,22 +464,11 @@ footer p {
         height: auto;
     }
 
-    .cards-section, .place-container {
+    .place-container {
         flex-direction: column;
         padding: 20px 10px;
     }
 
-    .card, .education-card {
-        width: 100%;
-        margin-bottom: 20px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /* Ocultar imágenes en la sección de educación */
     .education-card img {
         display: none;
     }
@@ -451,8 +479,8 @@ footer p {
     }
 
     .education-card {
-        margin: 0 auto; /* Centra la tarjeta en el contenedor */
-        max-width: 500px; /* Limita el ancho máximo para que no se vea demasiado ancha */
+        margin: 0 auto; 
+        max-width: 500px;
     }
 
     .contact-section form {
@@ -461,8 +489,7 @@ footer p {
     }
 }
 
-
-/* Estilos para pantallas medianas (tabletas) */
+/* Estilos para tablets */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .header-section {
         flex-direction: column;
